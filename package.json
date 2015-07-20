@@ -1,11 +1,12 @@
 {
-  "name": "totable",
-  "version": "1.0.1",
+  "name": "paste-table",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browser": "browserify browser/app.js > browser/bundle.js"
+    "browser": "browserify browser/app.js > browser/bundle.js",
+	"readme": "pretty-readme > readme.md"
   },
   "author": "",
   "license": "ISC",
