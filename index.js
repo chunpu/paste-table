@@ -87,8 +87,14 @@ proto.element = function() {
 	_.each(table.body, function(arr) {
 		var $tr = $('<tr>').appendTo($tbody)
 		_.each(arr, function(val) {
-			val = val.split('\n').join('<br>')
-			$('<td>').text(val).appendTo($tr)
+			var $td = $('<td>').appendTo($tr)
+			var items = val.split('\n')
+			_.each(items, function(item, i) {
+				$td.append(item)
+				if (i != items.length - 1) {
+					$td.append('<br>')
+				}
+			})
 		})
 	})
 	return $table[0]
