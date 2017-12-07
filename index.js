@@ -192,6 +192,9 @@ function handler(data) {
 		var data = _.map($children, function(item) {
 			var text = $(item).text()
 			var innerText = item.innerText
+			if (isHead) {
+				return text
+			}
 			return innerText || text // 优先 innerText, 因为自带换行
 		})
 		if (isHead) {

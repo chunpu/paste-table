@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browser": "browserify browser/app.js > browser/bundle.js",
     "dev": "NODE_ENV=development webpack-dev-server",
+    "build": "webpack",
     "readme": "pretty-readme > readme.md"
   },
   "author": "",

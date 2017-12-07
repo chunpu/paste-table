@@ -22,8 +22,11 @@ var config = {
 			VERSION: JSON.stringify(pkg.version),
 			DEBUG: DEBUG
 		})
-	],
-	devServer: {
+	]
+}
+
+if (DEBUG) {
+	config.devServer = {
 		contentBase: './browser',
 		host: '0.0.0.0'
 	}
