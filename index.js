@@ -190,13 +190,9 @@ function handler(data) {
 			return 'TH' == th.tagName.toUpperCase()
 		})
 		var data = _.map($children, function(item) {
-			var text = ''
-			if ('innerText' in item) {
-				return item.innerText // 自带换行, 很关键
-			} else {
-				text = $(item).text()
-			}
-			return text
+			var text = $(item).text()
+			var innerText = item.innerText
+			return innerText || text // 优先 innerText, 因为自带换行
 		})
 		if (isHead) {
 			ret.head.push(data)
