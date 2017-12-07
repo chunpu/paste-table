@@ -3,8 +3,6 @@ var PasteTable = require('../')
 $(function() {
 	var $input = $('#input')
 	PasteTable.onpaste($input, function(err, table) {
-		// console.log(table.markdown())
-		// console.log(table.confluence())
 		if (err) {
 			return console.error(err)
 		}

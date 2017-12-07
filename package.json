@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "browser": "browserify browser/app.js > browser/bundle.js",
-	"readme": "pretty-readme > readme.md"
+    "dev": "NODE_ENV=development webpack-dev-server",
+    "readme": "pretty-readme > readme.md"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "min-debug": "^1.4.2",
-    "min-util": "^1.6.10"
+    "min-log": "latest",
+    "min-util": "latest"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
